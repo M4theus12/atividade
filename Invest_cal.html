@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="pag2.html">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icon-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<meta charset="utf-8">
+	<title>
+	Investimento
+	</title>
+</head>
+<body  style="background-color:#2F2F56;">
+	<div class="coteiner" >
+		<div class="row justify-content-center">
+		<div class="col-4">
+			<form id="calc_form" class=" form-notas" method="post">
+      <h1 class="text-primary">Simulacao </h1>
+  <div class="mb-3">
+    <label for="name" id="name" class="form-label text-light nome">Nome</label>
+    <input type="text"   placeholder="Escreva seu Nome" class="form-control" id="name" name="name" aria-describedby="Nota do primerio Bimestre">
+   
+  </div>
+ 
+  <div class="mb-3">
+    <label for="monthly" class="form-label text-light">Mensalidade</label>
+    <input type="number"  min="0" max="100000"  placeholder="Valor da Mensalidade" class="form-control" id="monthly" name="monthly" aria-describedby="Nota do segundo Bimestre">
+   
+  </div>
+ 
+  <div class="mb-3">
+    <label for="time" class="form-label text-light">Tempo</label>
+    <input type="number"  placeholder="Tempo" min="0" max="4000" class="form-control" id="time" name="time" aria-describedby="Nota do terceiro Bimestre">
+   
+  </div>
+ 
+ 
+ <button class="btn btn-dark" type="submit" onclick="calcular(); return false;"> Simular</button>
+</form>
+
+
+	<div class="row justify-content-center d-none result mt-3"  id="result">
+          <div class="col-6">
+            <div class="text-center text-white">
+              <p class="text-break fs-1"> Olá <span id="nameresult" class="nameresult">...</span> Juntando <span 
+              id="mensalidaderesult" 	class="mensalidaderesult">...</span> por mês, você terá
+         <span id="formula" class="formula">...</span> em<span id="data" class="data">...</span> </p>
+       <button type="submit" class="btn btn-primary mt-3" onclick="voltar(); return false;">Voltar</button>
+      </div>
+			
+
+
+
+
+
+
+
+
+
+
+	</div>
+	</div>
+	</div>
+
+	<script type="text/javascript" src="-js/calcular_invest.js"></script>
+</body>
+</html>
